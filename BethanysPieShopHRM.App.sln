@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethanysPieShopHRM.Shared",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethanysPieShopHRM.Api", "BethanysPieShopHRM.Api\BethanysPieShopHRM.Api.csproj", "{8DFB4610-C465-4F16-B22B-71CF09F6455C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethanysPieShopHRM.RazorClassLibrary", "BethanysPieShopHRM.RazorClassLibrary\BethanysPieShopHRM.RazorClassLibrary.csproj", "{BB1EB58A-1AAF-46BF-A2BC-E3B754A020DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethanysPieShopHRM.RazorClassLibrary", "BethanysPieShopHRM.RazorClassLibrary\BethanysPieShopHRM.RazorClassLibrary.csproj", "{BB1EB58A-1AAF-46BF-A2BC-E3B754A020DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethanysPieShopHRM.Client", "BethanysPieShopHRM.Client\BethanysPieShopHRM.Client.csproj", "{411A9166-049E-4534-9A4C-7D8F56B8DB85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethanysPieShopHRM.Server", "BethanysPieShopHRM.Server\BethanysPieShopHRM.Server.csproj", "{22DB7E61-6B74-4EAD-91D3-8B38CFD1E295}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{BB1EB58A-1AAF-46BF-A2BC-E3B754A020DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB1EB58A-1AAF-46BF-A2BC-E3B754A020DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB1EB58A-1AAF-46BF-A2BC-E3B754A020DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{411A9166-049E-4534-9A4C-7D8F56B8DB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{411A9166-049E-4534-9A4C-7D8F56B8DB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{411A9166-049E-4534-9A4C-7D8F56B8DB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{411A9166-049E-4534-9A4C-7D8F56B8DB85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DB7E61-6B74-4EAD-91D3-8B38CFD1E295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DB7E61-6B74-4EAD-91D3-8B38CFD1E295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DB7E61-6B74-4EAD-91D3-8B38CFD1E295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DB7E61-6B74-4EAD-91D3-8B38CFD1E295}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
