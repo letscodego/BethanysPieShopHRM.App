@@ -19,19 +19,19 @@ namespace BethanysPieShopHRM.Shared
         [Required]
         [EmailAddress]
         public string Email { get; set; }
-        public string Street { get; set; }
-        public string Zip { get; set; }
-        public string City { get; set; }
+        public string? Street { get; set; }
+        public string? Zip { get; set; }
+        public string? City { get; set; }
         public int CountryId { get; set; }
         public Country? Country { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
         public bool Smoker { get; set; }
         public MaritalStatus MaritalStatus { get; set; }
         public Gender Gender { get; set; }
 
 
         [StringLength(1000, ErrorMessage = "Comment length can't exceed 1000 characters.")]
-        public string Comment { get; set; }
+        public string? Comment { get; set; }
         public DateTime? JoinedDate { get; set; }
         public DateTime? ExitDate { get; set; }
         public int JobCategoryId { get; set; }
