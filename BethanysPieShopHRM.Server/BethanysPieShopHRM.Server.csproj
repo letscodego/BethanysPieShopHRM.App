@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.SignalR" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BethanysPieShopHRM.App\BethanysPieShopHRM.App.csproj" />
     <ProjectReference Include="..\BethanysPieShopHRM.RazorClassLibrary\BethanysPieShopHRM.RazorClassLibrary.csproj" />
   </ItemGroup>
