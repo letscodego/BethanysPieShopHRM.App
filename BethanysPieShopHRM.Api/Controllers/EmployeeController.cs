@@ -9,10 +9,16 @@ namespace BethanysPieShopHRM.Api.Controllers
     public class EmployeeController : Controller
     {
         private readonly IEmployeeRepository _employeeRepository;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IHttpContextAccessor _httpcontextAccessor;
 
-        public EmployeeController(IEmployeeRepository employeeRepository)
+        public EmployeeController(IEmployeeRepository employeeRepository,
+            IWebHostEnvironment webHostEnvironment,
+            IHttpContextAccessor httpcontextAccessor)
         {
             _employeeRepository = employeeRepository;
+            _webHostEnvironment = webHostEnvironment;
+            _httpcontextAccessor = httpcontextAccessor;
         }
 
         [HttpGet]
@@ -40,6 +46,14 @@ namespace BethanysPieShopHRM.Api.Controllers
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
+            var currentUrl = _httpcontextAccessor.HttpContext.Request.Host.Value;
+            var path = $"{_webHostEnvironment.WebRootPath}\\uploads\\{employee.ImageName}";
+            using (var fileStream = System.IO.File.Create(path))
+            {
+                fileStream.Write(employee.ImageContent, 0, employee.ImageContent.Length);
+            }
+            employee.ImageName = $"https://{currentUrl}/uploads/{employee.ImageName}";
 
             var createdEmployee = _employeeRepository.AddEmployee(employee);
 
