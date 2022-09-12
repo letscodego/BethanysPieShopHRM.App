@@ -10,6 +10,12 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.virtualized {
+    overflow: auto;
+    width: 100%;
+    height: 600px;
+}
+
 nav {
     background-color: #a593c2;
     border-color: #a593c2;
