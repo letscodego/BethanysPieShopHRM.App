@@ -1,4 +1,4 @@
-﻿namespace BethanysPieShopHRM.RazorClassLibrary.Map
+﻿namespace BethanysPieShopHRM.Shared
 {
     public class Marker
     {

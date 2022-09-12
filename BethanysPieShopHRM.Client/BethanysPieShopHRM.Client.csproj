@@ -18,4 +18,8 @@
     <ProjectReference Include="..\BethanysPieShopHRM.RazorClassLibrary\BethanysPieShopHRM.RazorClassLibrary.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<BlazorWebAssemblyLazyLoad Include="BethanysPieShopHRM.RazorClassLibrary.dll"/>
+	</ItemGroup>
+	
 </Project>
