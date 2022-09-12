@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
+
 var apiBaseAddress = string.Empty;
-apiBaseAddress = builder.Configuration["ApiBaseAddress_prod"];
-// apiBaseAddress = builder.Configuration["ApiBaseAddress_dev"];
+var baseAddress = builder.HostEnvironment.BaseAddress;
+if(baseAddress.Contains("localhos"))
+    apiBaseAddress = builder.Configuration["ApiBaseAddress_dev"];
+else
+    apiBaseAddress = builder.Configuration["ApiBaseAddress_prod"];
 
 //to be able to use the code for both blazor client-side or server-side, we need to use http factory instead of httpclient
 //builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri("https://localhost:44338") });
